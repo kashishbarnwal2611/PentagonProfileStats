@@ -1,0 +1,64 @@
+<!DOCTYPE html lang="en">
+
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Pentagon💎 Profile Stats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💎 Pentagon Profile Stats</h1>
+            <h3>Your Dev Journey, Visualized!</h3>
+        </div>
+        <br />
+        <div class="content">
+            <div class="user">
+                <img src="user1.png" alt="user">
+            </div>
+
+            <div class="details">
+                <label>Name:</label>
+                <input type="text" pattern="/[A-Z a-z\s]+/" id="name" placeholder="Enter your name." required />
+                <br>
+                <br />
+                <label for="experience">Years of Experience:</label>
+                <select id="experience" required="on">
+                    <option value="" hidden selected>Select</option>
+                    <option value="0">0 Years</option>
+                    <option value="1">1 Year</option>
+                    <option value="2">2 Years</option>
+                    <option value="3">3 Years</option>
+                    <option value="4">4 Years</option>
+                    <option value="5">5+ Years</option>
+                </select>
+                <br />  
+                <br />
+                <div class="autocomplete-box">
+                    <label for="skills">Skills:</label>
+                    <input type="text" id="skills" min="0" placeholder="Search and tag your expertise" onkeyup="showSuggestions()" />
+                </div>
+                <div class="suggestions-container">
+                    <div id="suggestionsList"></div>
+                    <div id="skillsContainer" class="skills-container"></div>
+                </div>
+                <br />
+                <label for="websites">Websites Developed:</label>
+                <input type="number" id="websites" min="0" placeholder="Enter number" required="on" />
+                <br />
+                <br />
+                <label for="apps">Apps Made:</label>
+                <input type="number" id="apps" min="0" placeholder="Enter number" required="on" />
+                <br />
+                <br />
+                <button id="measureBtn">Track 🚀</button>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+body {
+    background: linear-gradient(to right, #00AFB9, #FED9B7);
+    color: orangered;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    margin: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #03a1ac;
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #f2f2f3;
+    background: radial-gradient(circle, );
+}
+
+.header h3 {
+    padding-left: 60px;
+    margin-top: 0px;
+}
+
+.content {
+    background: linear-gradient(to right, #00AFB9, #FED9B7);
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+}
+
+img {
+    width: 55%;
+    height: 35%;
+    border-radius: 100%;
+}
+
+.user {
+    width: 25%;
+    text-align: center;
+}
+
+.details {
+    font-size: 20px;
+}
+
+label,
+input {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+label {
+    width: 400px;
+    height: 45px;
+    color: #000000;
+}
+
+select,
+input {
+    width: 440px;
+    float: right;
+    height: 45px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #a90c0c;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+select:focus,
+input:focus {
+    border-color: #0e922b;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+input[type="search"]{
+    margin-left: 420px;
+    padding-top: 20px;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    border: 2px solid #29bfc7c5;
+    border-radius: 5px;
+    min-height: 20px;
+    align-items: center;
+    background-color: white;
+    position: relative;
+    margin-left: 420px;
+}
+
+.tag {
+    background: orangered;
+    color: white;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.remove-tag {
+    margin-left: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.suggestions li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions li:hover {
+    background-color: orangered;
+    color: white;
+}
+
+button[id="measureBtn"] {
+    width: 25%;
+    height: 10%;
+    background: #d36747;
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    border-radius: 5px;
+    margin-left: 40%;
+    margin-right: 35%;
+}
+
+.result-card {
+    width: 320px;
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.7);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.result-card .cup-img {
+    width: 100px;
+    height: auto;
+}
+
+.result-card .stars {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.result-card .caption {
+    font-size: 14px;
+    font-weight: bold;
+    color: orangered;
+}
+
+.autocomplete-box { 
+    display: flex;
+    max-width: 100%; 
+    padding: 5px; 
+    position: relative; 
+}
+
+.suggestions {
+    margin: 7px;
+    color: white;
+    font-size: 14px;
+    border-top: 1px solid #635e76;
+    border-radius: 12px;
+    cursor: pointer;
+    padding: 5px;
+    background: rgb(60, 68, 84);
+    position: relative;
+}
+
+.suggestions:hover {
+    background-color: rgb(124, 136, 138);
+    color: rgb(75, 66, 66);
+}
+
+.skills-container {
+    display: flex;
+    margin-top: 10px;
+    width: 50%;
+    max-width: 50%;
+    float: right;
+    flex-wrap: wrap;
+}
+
+.suggestions-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: auto;
+    height: auto;
+    margin-top: auto;
+    z-index: 100;
+}
+
+.skill {
+    font-size: 14px;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 2px;
+    background: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+
+#suggestionsList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    max-width: 50%;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+
+.float-right {
+    float: right;
+}
+
+#cross {
+    color: #635e76;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.crossDiv {
+    float: right;
+}
+
+#skills {
+    margin-left: 10px;
+}
