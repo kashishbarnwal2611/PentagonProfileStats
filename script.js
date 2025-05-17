@@ -1,8 +1,8 @@
 var availableSkills = {
-    "Frontend": ["HTML", "CSS", "JavaScript", "React", "Angular", "Vue"],
-    "Backend": ["Node.js", "Django", "Spring Boot", "Express.js", "Flask"],
-    "Full Stack": ["MongoDB", "SQL", "GraphQL", "REST API", "Docker"],
-    "Tester": ["Selenium", "Jest", "Mocha", "Cypress", "JUnit"]
+    "Frontend": ["HTML", "CSS", "JavaScript", "React", "Angular", "Vue", "Bootstrap", "JSP"],
+    "Backend": ["Node.js", "Django", "Spring Boot", "Spring", "Express.js", "Flask", "Java"],
+    "Full Stack": ["MongoDB", "SQL", "GraphQL", "REST API", "Docker", "Spring MVC"],
+    "Tester": ["Selenium", "Jest", "Mocha", "Cypress", "JUnit", "Cucumber"]
 };
 
 var skillList = Object.values(availableSkills).flat();
@@ -73,6 +73,9 @@ function classifyUser(selectedSkills, websites, apps) {
 }
 
 function determineExperienceLevel(years, websites, apps) {
+    if (years == 0) {
+        return "Learner";
+    }
     let score = years + (websites * 0.5) + (apps * 0.7);
 
     if (websites == 0 && apps == 0 && years != 0) {
@@ -122,7 +125,7 @@ function showSuggestions() {
     suggestionsList.innerHTML = "";
     if (input === "") return;
     
-    const filteredSkills = skillList.filter(skill => skill.toLowerCase().includes(input));
+    const filteredSkills = skillList.filter(skill => skill.toLowerCase().startsWith(input));
 
     console.log(filteredSkills);
     
@@ -143,4 +146,5 @@ function addSkill(skill) {
     skillsContainer.appendChild(skillElement);
     document.getElementById("skills").value = "";
     document.getElementById("suggestionsList").innerHTML = "";
+    skillList = skillList.filter(item => item != skill);
 }
